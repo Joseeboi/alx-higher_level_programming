@@ -1,7 +1,8 @@
-#include "list.h"
+#include "lists.h"
+#include <stdio.h>
 
 /**
- * is_palindrome - reccursive palind or not
+ * palindrome - reccursive palind or not
  * @head: head list
  * Return: 0 if it is not a palindrome
  * 1 if it is a palindrome
@@ -17,6 +18,7 @@ int is_palindrome(listint_t **head)
  * aux_palind - function to know if is palindrome
  * @head: head list
  * @end: end list
+ * Return: 0 if palind or 1 if not
 */
 int aux_palind(listint_t **head, listint_t *end)
 {
