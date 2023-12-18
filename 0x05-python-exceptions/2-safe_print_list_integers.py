@@ -1,20 +1,15 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    index = 0
-    
     try:
-        while count < x:
+        for i in range(x):
             try:
-                value = my_list[index]
-                if isinstance(value, int):
-                    print("{:d}".format(value), end=" ")
+                print("{:d}".format(my_list[i]), end="")
+                if isinstance(my_list[i], int):
                     count += 1
             except (ValueError, TypeError):
                 pass
-            index += 1
+        print("\nnb_print:", count)
     except IndexError:
         pass
-    
-    print()
     return count
